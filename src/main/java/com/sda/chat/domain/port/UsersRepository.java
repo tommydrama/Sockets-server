@@ -11,4 +11,5 @@ public interface UsersRepository {
 
     List<ChatUser> findAll();
 
+
 }
