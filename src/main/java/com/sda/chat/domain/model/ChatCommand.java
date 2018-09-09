@@ -1,7 +1,7 @@
 package com.sda.chat.domain.model;
 
 public enum ChatCommand {
-    LIST_USERS("users"), SEND_MESSAGE("send");
+    LIST_USERS("users"), SEND_MESSAGE("send"), MESSAGES("messages"), NEW_MESSAGES("new_messages");
 
     private String commandName;
 
@@ -15,6 +15,10 @@ public enum ChatCommand {
                 return ChatCommand.LIST_USERS;
             case "send":
                 return ChatCommand.SEND_MESSAGE;
+            case "messages":
+                return ChatCommand.MESSAGES;
+            case "new_messages":
+                return ChatCommand.NEW_MESSAGES;
                 default:
                     return null;
         }

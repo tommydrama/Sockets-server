@@ -7,7 +7,9 @@ import java.util.List;
 public interface UsersRepository {
     ChatUser addUser(ChatUser user);
 
-    ChatUser find(String adress);
+    ChatUser findByAdress(String adress);
+
+    ChatUser findByName(String name);
 
     List<ChatUser> findAll();
 

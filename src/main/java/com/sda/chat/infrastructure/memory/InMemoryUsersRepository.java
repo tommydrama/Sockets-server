@@ -17,12 +17,21 @@ public class InMemoryUsersRepository implements UsersRepository {
     }
 
     @Override
-    public ChatUser find(String adress) {
+    public ChatUser findByAdress(String adress) {
         for (ChatUser  user: users){
              if(adress.equals(user.getAdress())){
                  return user;
             }
         }return null;
+    }
+
+    @Override
+    public ChatUser findByName(String name) {
+        for(ChatUser user: users){
+            if(name.equalsIgnoreCase(user.getName())){
+                return user;}
+        }
+        return null;
     }
 
     @Override
